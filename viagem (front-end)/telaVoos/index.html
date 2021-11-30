@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei das Viagens - Voos</title>
+    <link rel="shortcut icon" href="./assets/coroa-branca.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="validaCards(), validaAcesso(), validaCompanhiaCard()">
+    <header class="hearder">
+
+        <div class="content">
+            <div class="logo">
+                <img src="assets/coroaazul.png"><p>Rei das Viagens</p>
+            </div>
+            <div class="blog">
+                <div class="link-log-blog">
+                    <a href="../telaLogin/index.html"><img src="assets/user.png" id="img-sessao"></a>
+                    <p class="p">Iniciar Sessão</p> 
+                </div>
+                
+                <div class="box-options">
+                    <img src="assets/x.png" alt="" id="close">
+                    <div class="options">
+                    </div>
+                    <div class="area-cliente">
+                        <h1>Minhas Passagens</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="campos">
+            <div class="block-inicio"  onclick="document.location.href = '/telaInicio/index.html'">
+                <p>Inicio</p>
+            </div>
+            <div class="block-passagem" onclick="document.location.href = '/telaVoos/index.html'">
+                <p>Passagens</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <p>Resultado de sua pesquisa</p>
+            <div class="linha">
+            </div>
+            <div class="bloco-idaevolta">
+                <div class="ida">
+                    <p>Ida</p>
+                    <div class="radio" id="input1" onclick="selecionar(this)"></div>
+                </div>
+                <div class="ida-volta">
+                    <p>Ida e Volta</p>
+                    <div class="radio" id="input2" onclick="selecionar(this)"></div>
+                </div>
+            </div>
+            <div class="linha">
+            </div>
+            <form id="form" action ="" method="POST">
+            <div class="passagem">
+                <div class="destino-origem">
+                    <div class="origem">
+                        <input type="text" id="origem" placeholder="ORIGEM" required>
+                        <div class="box-origem-destino1">
+                            <p>Cidades e Aeroportos</p>
+                            <div class="box-cidades-aero1">   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destino">
+                        <input type="text" id="destino" placeholder="DESTINO" required>
+                        <div class="box-origem-destino2">
+                            <p>Cidades e Aeroportos</p>
+                            <div class="box-cidades-aero2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datas">
+                    <input type="date" id="dataIda" disabled>
+                    <input type="date" id="dataVolta" disabled>
+                </div>
+               
+            </div>
+        </form>
+                <a onclick="buscar(), validaCards()"><img src="assets/buscar.png"><p>Buscar</p></a>
+            </div>   
+        </main>   
+        <div class="container-cards">
+            
+        </div>
+        
+        <div class="cards">
+            <div class="comp-aerea">
+                <img src="./assets/gol.png">
+                <h3>Pedreira</h3>
+                <p></p>
+            </div>    
+            <div class="ida">
+                <div class="ida-img">
+                    <img src="assets/aviao.png">
+                    <p>IDA</p>
+                </div>
+                <p>sáb.30 out.2021</p>
+            </div>
+            <div class="voos">
+                <div class="local">
+                    <h4>São Pedro</h4>
+                    <h4>Jão de ná</h4>
+                </div>
+                <div class="hora">
+                    <p>21:40</p>
+                    <p>10:25</p>
+                </div>
+                <p>Duração: 9h 45m</p>
+            </div>
+            <div class="tipo-preco">
+                <div class="preco-tipo">
+                    <p>Criança: R$ 800</p>
+                    <p>Adulto: R$ 800</p>
+                    <p>Valor: R$ 200</p>
+                </div>
+                <div class="div-tipo-baga">
+                    <div class="div-bagagem">
+                        <div>
+                            <img src="assets/mochila.png" alt="">
+                            <div>
+                                <p>desc: Despachar</p>
+                                <p>peso: 15Kg</p>
+                                <p>valor: R$ 120</p>
+                            </div>
+                        </div>
+                        <img src="assets/x.png" alt="">
+                    </div>
+                    <div class="assen-baga">
+                        <p>Assentos: 30</p>
+                        <div class="bagagem">
+                            <p>Bagagem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>Comprar</button>
+        </div>
+        
+        <div class="cardsVolta">
+            <div class="comp-aerea">
+                <img src="./assets/gol.png">
+                <h3>Pedreira</h3>
+                <img src="assets/setas.png">
+                <h3>Itatinga</h3>
+                <img src="./assets/gol.png">
+                    
+            </div>
+            <div class="ida">
+                <div class="ida-img">
+                    <img src="assets/aviao.png">
+                    <p>IDA</p>
+                </div>
+                <p>sáb.30 out.2021</p>
+            </div>
+            <div class="voos">
+                <div class="local">
+                    <h4>São Pedro</h4>
+                    <h4>Jão de ná</h4>
+                </div>
+                <div class="hora">
+                    <p>21:40</p>
+                    <p>10:25</p>
+                </div>
+                <p>Duração: 9h 45m</p>
+            </div>
+            
+            <div class="tipo-preco">
+                <div class="preco-tipo">
+                    <p>Criança: R$ 800</p>
+                    <p>Adulto: R$ 800</p>
+                    <p>Valor: R$ 200</p>
+                </div>
+                <div class="div-tipo-baga">
+                    <div class="div-bagagem">
+                        <div>
+                            <img src="assets/mochila.png" alt="">
+                            <div>
+                                <p>desc: Despachar</p>
+                                <p>peso: 15Kg</p>
+                                <p>valor: R$ 120</p>
+                            </div>
+                        </div>
+                        <img src="assets/x.png" alt="">
+                    </div>
+                    <div class="assen-baga">
+                        <p>Assentos: 30</p>
+                        <div class="bagagem">
+                            <p>Bagagem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ida">
+                <div class="ida-img">
+                    <img src="assets/aviaoaocontrario.png">
+                    <p>VOLTA</p>
+                </div>
+                <p>sáb.30 out.2021</p>
+            </div>
+            <div class="voos">
+                <div class="local">
+                    <h4>Jão de ná</h4>
+                    <h4>São Pedro</h4>
+                </div>
+                <div class="hora">
+                    <p>21:40</p>
+                    <p>10:25</p>
+                </div>
+                <p>Duração: 9h 45m</p>
+            </div>
+            
+            <button type="button">Comprar</button>
+        </div>
+        <footer>
+            <div class="footer-conteudo">
+                <div class="inst">
+                    <h6>INSTITUCIONAL</h6>
+                    <div class="cmp">
+                        <a href="../telaInicio/index.html">Home</a>
+                        <a href="../telaVoos/index.html">Passagens</a>
+                    </div>
+                </div>
+                <div class="contato">
+                    <h6>CONTATO</h6>
+                    <div class="ctt">
+                        <p>(019) 99716-1599</p>
+                    </div> 
+                </div>
+                <div class="devs">
+                    <h6>Desenvolvedores</h6>
+                    <p>Michael José</p>
+                    <p>Rafael Tieppo</p>
+                    <p>Allan Silva</p>
+                    <p>Rodrigo Morais</p>
+                </div>
+            </div>
+            <div class="footer-end">
+                <div class="tc">
+                    <p>Rei das Viagens</p>
+                </div>
+           
+                <div class="dir">
+                    <p>&copy 2021 Rei das Viagens.</p>
+                    <p>Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
+</main>
+</body>
+<script src="index.js"></script>
+<script src="/telaInicio/index.js"></script>
+<script src="/telaInicio/indexLis.js"></script>
+</html>

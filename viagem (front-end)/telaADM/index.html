@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela ADM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="seta-dupla-para-cima.png" alt="" onclick="direcionar()">
+    </header>
+    <div class="linha"></div>
+    <main>
+        <div class="cd">
+            <h2>Cidade</h2>
+            <form>
+                <input type="text" placeholder="Nome" id="cidade-nome">
+                <input type="text" placeholder="Aeroporto" id="cidade-aero">
+                <input type="text" placeholder="Image Link" id="cidade-image">
+                <button type="button" onclick="cidade(this)">Adicionar</button>
+            </form>
+        </div>
+        <div class="cd">
+            <h2>Companhia Aérea</h2>
+            <form>
+                <input type="text" placeholder="Nome" id="companhia-nome">
+                <input type="text" placeholder="CNPJ" id="companhia-cnpj">
+                <button type="button" onclick="companhia(this)">Adicionar</button>
+            </form>
+        </div>
+        <div class="cd">
+            <h2>Tipo Bagagem</h2>
+            <form>
+                <input type="text" placeholder="Descrição" id="bagagem-desc">
+                <input type="text" placeholder="Peso" id="bagagem-peso">
+                <input type="text" placeholder="Custo" id="bagagem-custo">
+                <button type="button" onclick="bagagem(this)">Adicionar</button>
+            </form>
+        </div>
+        <div class="cd">
+            <h2>Card</h2>
+            <div class="check">
+                <div class="ida-volta">
+                    <p>Ida</p>
+                    <div class="radio" id="radio1" onclick="selecionar(this)"></div>
+                </div>
+                <div class="ida-volta">
+                    <p>Ida e Volta</p>
+                    <div class="radio" id="radio2" onclick="selecionar(this)"></div>
+                </div>
+            </div>
+            <form class="form-card">
+                <div>
+                    <div>
+                        <input type="text" id="origem" placeholder="ORIGEM">
+                       
+                        <div class="box-origem-destino1">
+                            <p>Cidades e Aeroportos</p>
+                            <div class="box-cidades-aero1">   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" id="destino" placeholder="DESTINO">
+                        <div class="box-origem-destino2">
+                            <p>Cidades e Aeroportos</p>
+                            <div class="box-cidades-aero2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-time">
+                    <div class="div-h-1">
+                        <div class="hEm">
+                            <label for="time-embarque">H. Embarque</label>
+                            <input type="datetime-local" name="" id="date-ti-local1">
+                        </div>
+                        <div class="hDe">
+                            <label for="time-desembarque">H. Desembarque</label>
+                            <input type="time" name="time-desembarque" id="hDes1">
+                        </div>
+                    </div>
+                    <div class="div-h-2">
+                        <div class="hEm">
+                            <label for="time-embarque">H. Embarque</label>
+                            <input type="datetime-local" name="" id="date-ti-local2">
+                        </div>
+                        <div class="hDe">
+                            <label for="time-desembarque">H. Desembarque</label>
+                            <input type="time" name="time-desembarque" id="hDes2">
+                        </div>
+                    </div>
+                </div>
+                <div class="div-companhia">
+                    <select  id="companhia" onclick="lisCompanhia()">
+                        
+                    </select>
+                    <select  id="bagagem" onclick="lisBagagem()">
+
+                    </select>
+                </div>
+                <div class="div-valor">
+                    <h3>Preço</h3>
+                    <div class="preco">  
+                        <input type="text" placeholder="Adulto" id="card-adulto">
+                        <input type="text" placeholder="Criança" id="card-crianca">
+                    </div>
+                    <div class="preco">
+                        <input type="text" placeholder="Valor passagem" id="card-vPassagem">
+                        <input type="text" placeholder="Total assentos" id="card-tAssentos">
+                    </div>
+                </div>
+                <button onclick="card(this)" type="button">Adicionar</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+<script src="/telaInicio/indexLis.js"></script>
+<script src="indexCid.js"></script>
+<script src="indexCom.js"></script>
+<script src="indexCar.js"></script>
+<script src="indexBag.js"></script>
+</html>

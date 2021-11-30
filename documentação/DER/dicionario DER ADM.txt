@@ -1,0 +1,23 @@
+tabela adms
+senha String 
+usuario String
+
+tabela cidades
+
+tabela ida 
+id origem
+id destino
+
+tabela volta
+id origem
+id destino
+
+tabela cards
+valor
+id_ida
+id_volta
+id_comanhia
+h_embarque
+h_desembarque
+preço adulto 
+preço criança

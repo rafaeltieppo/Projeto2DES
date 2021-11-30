@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+body {
+    background: #EEEEEE;
+}
+
+
+.header {
+    display: flex;
+    width: 50vw;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.cd {
+    text-align: center;
+    width: 30vw;
+    margin: auto;
+    background-color: white;
+    border: 2px lightgray solid;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 8px;;
+    box-shadow: 2px 3px rgba(92, 90, 90, 0.1);
+}
+
+.header > img {
+    width: 40px;
+}
+
+h1 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input, select {
+    background: #EEEEEE;
+    width: 300px;
+    height: 50px;
+    padding: 0 10px 0;
+    margin-top: 1rem;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+form > button {
+    background: #312fcc;
+    width: 250px;
+    height: 50px;
+    margin-top: 1rem;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.linha {
+    background: rgb(119, 119, 119);
+    height: 0.1px;
+    width: 60vw;
+    margin-left: 17vw;
+}
+
+h2 {
+    color: black;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check p {
+    color:rgb(0, 0, 0);
+}
+
+.form-card {
+    width: 100%;
+}
+
+.radio {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 35px;
+    border: 1px #5e5e5e solid;
+    background-color: white;
+}
+
+.ida-volta {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    justify-content: space-evenly;
+}
+
+.div-h-1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-h-2 {
+    display: none;
+    visibility: hidden;
+}
+
+.hDe > input {
+    width: 15vw;
+}
+
+.preco {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.preco > input {
+    width: 30vw;
+}
+
+#date-time-local {
+    width: 40vw;
+}
+
+
+.box-origem-destino1 {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 1340px;
+    left: 23%;
+    width: 50vw;
+
+    border: solid 1px #5e5e5e;
+    box-shadow: 3px 4px rgba(9, 9, 9, 0.2);
+    border-radius: 0px 5px 5px 0;
+    background-color: rgb(223, 222, 222);
+    padding: 10px;
+}
+
+.box-origem-destino2 {
+    display: none;
+    visibility: visible;
+    position: absolute;
+    top: 1380px;
+    left: 23%;
+    width: 45vw;
+
+    box-shadow: 3px 4px rgba(9, 9, 9, 0.2);
+    border-radius: 0px 5px 5px 0;
+    background-color: rgb(223, 222, 222);
+    padding: 10px;
+}
+
+.box-origem-destino2 > div > option {
+    
+}
+
+.box-origem-destino2 > p {
+    color: black;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    border-bottom: solid #5e5e5e 1px;
+}
+
+#date-ti-local1 {
+    width: 14vw;
+}
+#date-ti-local2 {
+    width: 14vw;
+}

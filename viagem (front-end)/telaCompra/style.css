@@ -1,0 +1,869 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.hearder {
+    height: 13vh;
+    width: 100%;
+    box-shadow: 2px 2px rgba(124, 119, 119, 0.1);
+}
+
+.campos {
+    height: 3vh;
+    width: 60vw;
+    display: flex;
+    
+    margin: auto;
+}
+
+.campos p {
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: bold;
+    color:#5e5e5e;
+}
+
+
+
+.block-inicio {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    width: 10%;
+    margin-right: 2vw;
+    box-shadow: 2px  2px rgba(124, 119, 119, 0.1);
+    
+}
+
+.block-passagem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 10%;
+    border-radius: 5px;
+    box-shadow:   2px  2px rgba(124, 119, 119, 0.1);
+
+}
+
+.content {
+    width: 60VW;
+    height: 7vh;
+    margin: auto;
+    margin-bottom: 1vh;
+
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 60%;
+}
+
+.logo p {
+    color: #312fcc;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.link-log-blog {
+    height: 4vh;
+    display: flex;
+    width: 100%;
+    background-color: rgba(207, 205, 202, 0.397);
+    border-radius: 0 0 0 25px;
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-log-blog p {
+    font-size: 0.9rem;
+    margin-top: 1vh;
+    margin-left: 0.3vw;
+}
+
+.link-log-blog img {
+    height: 3vh;
+    cursor: pointer;
+    display: flex;
+}
+
+.blog {
+    width: 10vw;
+    height: 5%;
+}
+
+.box-options {
+    background-color: white;
+    display: none;
+    visibility: hidden;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.box-options > img {
+    width: 5vh;
+    height: 5vh;
+    margin-bottom: 15px;
+
+    position: sticky;
+    top: 15px;
+    left: 95%;
+
+    transform: rotate(0.5turn);
+    transition: 5s;
+}
+
+.box-options > .options {
+    font-size: 1.3rem;
+    align-items: center;
+} 
+
+.box-options > .options > p {
+    margin: auto;
+    margin-bottom: 5vh;
+
+    height: 5vh;
+    width: 50vw;
+    line-height: 5vh;
+    border-radius: 25px;
+    border: 1px lightgray solid;
+}
+
+.box-options > .options > p:hover {
+    box-shadow: 2px 3px rgba(9, 9, 9, 0.2);
+    transition: 1s;
+}
+
+.area-cliente {
+    display: none;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-form {
+    background: #ffffff;
+    border-radius: 5px;
+    border: 2px solid rgba(124, 119, 119, 0.3);
+}
+
+.caixa-form > h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 6vh;
+    color: rgb(32, 32, 131);
+}
+
+.form{
+    width:  60vh;
+    height: 60vh;
+    border-radius: 5px;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.form input {
+    width: 50%;
+    height: 4vh;
+    border: 1px solid rgba(124, 119, 119, 0.4);
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    border-radius: 3px;
+    outline: 0;
+    padding-left: 5vw   ;
+}
+
+.form label {
+    font-size: 1.2rem;
+}
+
+.form button {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 5px; 
+    background-color: #ffffff;
+    border: 1px #c2bcbc solid;
+}
+
+.caixa-chave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 10vw;
+    border-radius: 15px;
+    background-color: rgba(213, 202, 228, 0.2);
+    margin-bottom: 5vh;
+}
+
+.caixa-chave > img {
+    margin-left: 1vw;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.caixa-chave:hover {
+    width: 11vw;
+    height: 11vh;
+
+    border: 1px solid rgb(192, 182, 182);
+}
+
+.code-chave {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    
+    width: 30vw;
+    height: 40vh;
+}
+
+.model {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(223, 206, 206, 0.6);
+}
+
+.div-code {
+    background-color: #d9d9e2;
+    height: 50vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);;
+}
+
+
+.dados-cadastrado {
+    width:  60vh;
+    height: 50vh;
+    padding: 50px;
+    display: none;
+    justify-content: center;
+    
+}
+
+.dados-cadastrado > img {
+    width: 150px;
+    height: 150px;
+}
+
+
+.dados-pessoais {
+    width:  60vh;
+    height: 50vh;
+    padding: 50px;
+    display: none;
+    justify-content: center;
+    
+}
+
+.dados-pessoais > img {
+    width: 150px;
+    height: 150px;
+}
+
+.div-assentos {
+    width:  60vh;
+    height: 50vh;
+    padding: 20px;
+    display: none;
+    justify-content: center;
+}
+
+.div-assentos > input[type='radio'] {
+    width: 3vh;
+    margin: 0;
+}
+
+.div-assentos > input[type='radio']:checked {
+    background-color: #312fcc;
+    color: #312fcc;
+} 
+
+.caixa-dados {
+    width:  60vh;
+    height: 50vh;
+    text-align: center;
+    display: none;
+}
+
+.caixa-dados > div {
+    width: 250px;
+    background-color: rgb(229, 226, 226);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2vh;
+    justify-content: space-around;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.caixa-dados > div > img {
+    width: 75px;
+}
+
+.caixa-dados > select {
+    width: 20vw;
+    height: 5vh;
+    margin: auto;
+    display: flex;
+}
+
+
+
+.cadastrar-pessoais{
+    width:  60vh;
+    height: 60vh;
+    border-radius: 5px;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.cadastrar-pessoais > select {
+    width: 10vw;
+    height: 5vh;
+    margin: auto;
+    display: flex;
+    padding: 0;
+    border: 1px solid rgba(124, 119, 119, 0.4);
+}
+
+input[type="radio"]:checked{
+    background-color: #312fcc;
+    width: 75px;
+    border-radius: 0;
+}
+
+.cadastrar-pessoais input {
+    width: 50%;
+    height: 4vh;
+    border: 1px solid rgba(124, 119, 119, 0.4);
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-radius: 3px;
+    outline: 0;
+    padding-left: 5vw;
+}
+
+.cadastrar-pessoais label {
+    font-size: 1.2rem;
+}
+
+.cadastrar-pessoais button {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 5px; 
+    background-color: #ffffff;
+    border: 1px #c2bcbc solid;
+}
+
+.fundo-compra {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.model-compra {
+    width: 15vw;
+    height: 25vh;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.caixa-dados > img {
+    width: 150px;
+    height: 150px;
+   
+}
+/*
+.logo {
+    display: flex;
+    cursor: pointer;
+    margin-left: 7vw;
+    width: 50%;
+}
+
+.logo p {
+    color: #312fcc;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.imgs {
+    height: 4vh;
+    display: flex;
+    margin-top: -3.6vh;
+    float: right;
+    width: 17vw;
+    margin-right: -0.5vw;
+    border-radius: 0 0 0 25px;
+    background:#cfcfcf;
+    opacity: 0.9;
+}
+
+.imgs p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 1vh;
+    margin-left: 0.3vw;
+}
+
+.imgs img {
+    height: 2.5vh;
+    margin-left: 1vw;
+    cursor: pointer;
+    display: flex;
+    width: 26px;
+    margin-top: 0.7vh;
+}
+
+.hearder {
+    background: #EEEEEE;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.hearder .campos {
+    margin-top: 7vh;
+    display: flex;
+    margin-left: 6vw;
+}
+
+.hearder .campos p {
+    font-size: 1.05rem;
+    margin-left: 2vw;
+    cursor: pointer;
+    font-weight: bold;
+    color:#5e5e5e;
+    margin-top: -3vh;
+}
+
+.hearder .campos p:hover {
+    color: rgb(32, 32, 131);
+    transition: 0.7s;
+}
+
+
+.caixa-checks {
+    border-radius: 5px;
+    text-align: center;
+    width: 32vw;
+   
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: #312fcc;
+    padding: 5px;
+}
+
+.caixa-checks > input {
+    width: 5vw;
+    color: #5e5e5e;
+    background-color: #312fcc;
+    height: 4vh;
+}
+
+.assentos {
+    text-align: center;
+    width: 50vw;
+    margin: auto;
+}
+
+.assentos >p {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+
+.box-options {
+    background-color: white;
+    display: none;
+    visibility: hidden;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    height: 100vh;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.box-options > img {
+    width: 5vh;
+    height: 5vh;
+    margin-bottom: 15px;
+
+    position: sticky;
+    top: 15px;
+    left: 95%;
+
+    transform: rotate(0.5turn);
+    transition: 5s;
+}
+
+.box-options > .options {
+    font-size: 1.3rem;
+    align-items: center;
+} 
+
+.box-options > .options > p {
+    margin: auto;
+    margin-bottom: 5vh;
+
+    height: 5vh;
+    width: 50vw;
+    line-height: 5vh;
+    border-radius: 25px;
+    border: 1px lightgray solid;
+}
+
+.box-options > .options > p:hover {
+    box-shadow: 2px 3px rgba(9, 9, 9, 0.2);
+    transition: 1s;
+}
+
+.area-cliente {
+    display: none;
+}
+
+.selectPag {
+    display: none;
+}
+
+
+.dadCli {
+    align-items: center;
+    display: none;
+    padding: 15px;
+    border-radius: 15px;
+    width: 85%;
+    margin: auto;
+    height: 50vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: #c8c2e2;
+}
+
+.dadosVisual > label {
+    font-size: 1.2rem;
+}
+
+.dadosVisual > p{
+    font-size: 1.1rem;
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.dadosVisual > input {
+    display: none;
+}
+
+.dadosImg {
+    
+    background-color: white;
+    height: 130px;
+    border-radius: 100%;
+}
+
+.dadosImg > img {
+    width: 125px;
+    height: 125px;
+}
+
+.hearder .campos a {
+    text-decoration: none;
+    margin-left: 2vw;
+    cursor: pointer;
+    font-weight: bold;
+    color:#5e5e5e;
+    margin-top: -2.7vh;
+}
+
+.hearder .campos a:hover {
+    color: #312fcc;
+    transition: 0.4s;
+}
+
+.cards {
+    height: 87vh;
+    width: 85vw;
+    border-radius: 8px;
+    margin-left: 6.6vw;
+    margin-top: 1vh;
+    background: #FFF;
+    padding: 7px;
+    display: none;
+    box-shadow: 5px 5px rgba(247, 241, 241, 0.2);
+}
+
+.modal-off {
+    background:rgb(201, 200, 200);
+    margin-top: 1.9vh;
+    height: 25vh; 
+    width: 70vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-left: 15vw;
+    padding: 70px;
+}
+
+.modal-off p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+/*
+.viewComprar {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgb(226, 226, 240);
+}
+
+.Comprar {
+    width: 50vw;
+    height: 50vw;
+    background-color: rgb(149, 255, 193);
+    display: none;
+    position: absolute;
+    font-size: 1.1rem;
+    top: 25%;
+    left: 25%;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+main button {
+    margin: auto;
+    width: 25vw;
+    background: #312fcc;
+    border-radius: 25px;
+    color: white;
+    border: 1px solid lightsteelblue;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+.dd {
+    background: #312fcc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    color:rgb(245, 245, 245);
+    font-size: 15px;
+}
+
+.dp {
+    background: rgb(245, 245, 245);
+    border-radius: 7px;
+    width: 26vw;
+}
+
+.db {
+    background: rgb(245, 245, 245);
+    border-radius: 7px;
+    width: 28vw;
+}
+
+.cards h4 {
+    margin-top: 0.7vh;
+}
+
+.cards .caixao {
+    padding: 5px;
+    display: block;
+}
+
+.caixao p {
+    margin-top: 1vh;
+}
+
+.cards .caixao p {
+    font-size: 0.85rem;
+}
+
+.caixao input {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 4vh;
+    width: 50vw;
+    background: rgb(226, 226, 240);
+}
+
+.selectPag {
+    padding: 5px;
+}
+
+.selectDes {
+    padding: 5px;
+}
+
+.seletor {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 4vh;
+    width: 50vw;
+    background: rgb(226, 226, 240);
+}
+
+.seletorDes {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 4vh;
+    width: 50vw;
+    background: rgb(226, 226, 240);
+}
+
+#sexo {
+    height: 4vh;
+    width: 50vw;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background: rgb(226, 226, 240);
+}
+
+.line {
+    background: rgb(153, 153, 153);
+    height: 1px;
+    width: 83vw;
+    margin-top: 0.9vh;
+}
+
+.cards button {
+    margin: auto;
+    width: 25vw;
+    background: #312fcc;
+    border-radius: 25px;
+    color: white;
+    border: 1px solid lightsteelblue;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+}
+ 
+.footer {
+    height: 24vh;
+    background:#312fcc;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.70);
+    width: 100%;
+    margin-top: 4vh;
+}
+
+.rdv {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: rgb(226, 226, 240);
+    width: 40%;
+    border-radius: 0 0 20px 20px;
+    opacity: 0.85;
+}
+
+.rdv p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color:#3e1ecc;
+}
+
+.embaixo p {
+    margin-top: 6vh;
+    float: right;
+    margin-right: 2vw;
+}
+
+.devs {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1vh;
+}
+
+@media screen and (max-width: 1500px) {
+    #imgblog {
+        visibility: hidden;
+    }
+
+    .imgs {
+        width: 200px;
+    }
+}*/

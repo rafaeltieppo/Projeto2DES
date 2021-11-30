@@ -1,0 +1,1392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+    outline: none;
+}
+
+body {
+    /*background: #EEEEEE;*/
+    width: 100%;
+    height: 100%;
+}
+
+
+main {
+    background: url('./assets/fundo.jfif');
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+.hearder {
+    /*background: #EEEEEE;*/
+    height: 15%;
+    width: 100%;
+}
+
+ .main {
+    background: #312fcc;
+    height: 35vh;
+    width: 40vw;
+    margin: auto;
+    border-radius: 15px;
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+.main > p {
+    color: rgb(247, 247, 253);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 2vh;
+    margin: auto;
+}
+
+.main .passageiros {
+    display: flex;
+    justify-content: center;
+}
+
+.main .passagem .passageiros input {
+    width: 50vw;
+    border: 1px solid #FFF;
+}
+
+.main .bloco-idaevolta {
+    display: flex;
+    justify-content: center;
+}
+
+.main .ida {
+    color: rgb(247, 247, 253);
+}
+
+.main .ida-volta {
+    color: rgb(247, 247, 253);
+    display: flex;
+    align-items: center;
+    margin-left: 4vw;
+}
+
+.main .ida {
+    display: flex;
+    align-items: center;
+}
+
+.main .linha {
+    height: 1px;
+    width: 20vw;
+    background: rgb(255, 255, 255);
+    margin-top: 1vh;
+    margin: auto;
+}
+
+.main .passagem input{
+    height: 5vh;
+    width: 25vw;
+    display: inline;
+    border-radius: 8px;
+    margin-top: 1vh;
+    border: 1px solid lightslategray;
+    padding: 15px;
+}
+
+.main a {
+    background: rgb(226, 226, 240);
+    color:  #444;
+    height: 37px;
+    width: 35vw;
+    max-width: 1000px;
+    border-radius: 17px;
+    cursor: pointer;
+    border: 1.7px solid rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+
+.main a:hover {
+    background: #252399;
+    color: #ffffff;
+    transition: .5s;
+} 
+
+
+#input1 {
+    max-width: 20px;
+    max-height: 20px;
+    margin-left: 1vw;
+}
+
+#input2 {
+    max-width: 20px;
+    max-height: 20px;
+    margin-left: 1vw;
+}
+
+#origem {
+    height: 5vh;
+    width: 18vw;
+}
+
+#destino {
+    height: 5vh;
+    width: 18vw;
+}
+
+#dataIda {
+    width: 46%;
+}
+
+#dataVolta {
+    width: 46%;
+}
+
+#destino {
+    max-width: 500px;
+}
+
+.campos {
+    height: 3vh;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
+}
+
+.campos p {
+    cursor: pointer;
+    font-weight: bold;
+    color:#444;
+}
+
+.block-inicio {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    width: 20%;
+    box-shadow: 1px  1px rgba(124, 119, 119, 0.3);
+    
+}
+
+.block-passagem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 25%;
+    box-shadow: 1px  1px rgba(124, 119, 119, 0.3);
+
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 1vh;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 60%;
+}
+
+.logo p {
+    color: #312fcc;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.link-log-blog {
+    height: 4vh;
+    display: flex;
+    width: 100%;
+    background-color: rgb(216, 216, 247);
+    border-radius: 0 0 0 25px;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-log-blog p {
+    font-size: 0rem;
+    margin-top: 1vh;
+    margin-left: 0.3vw;
+}
+
+.link-log-blog img {
+    height: 4vh;
+    cursor: pointer;
+    display: flex;
+}
+
+.blog {
+    width: 30vw;
+    height: 5%;
+}
+
+.top {
+    padding: 20px;
+    margin-left: 14vw;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    margin: auto;
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 30%;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+#radio6:checked ~.first {
+    margin-left: -100%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    display: none;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.box-options {
+    background-color: #cbd1f0;
+    display: none;
+    visibility: hidden;
+    top: 80px;
+    right: 400px;
+    position: fixed;
+    border-radius: 10px;
+    height: 40%;
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+    z-index: 999;
+}
+
+.box-options > img {
+    width: 2vh;
+    height: 2vh;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 15px;
+    left: 95%;
+    /* transform: rotate(0.5turn); */
+    /* transition: 5s; */
+}
+
+.box-options > .options {
+    font-size: 1.3rem;
+    align-items: center;
+} 
+
+.box-options > .options > p {
+    display: flex;
+    margin: auto;
+    margin-bottom: 5vh;
+    height: 5vh;
+    width: 100%;
+    line-height: 5vh;
+}
+
+.box-options > .options > p:hover {
+    background:rgb(180, 180, 216)
+}
+
+.area-cliente {
+    display: none;
+}
+
+/* .main {
+    background: #3e1ecc;
+    height: 35vh;
+    width: 90vw;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+
+.main > p {
+    color: rgb(247, 247, 253);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+} */
+/* 
+.passageiros {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1vh;
+} */
+/* 
+#passageiros {
+    width: 70vw;
+    border: 1px solid #FFF;
+    margin: auto;
+} */
+/* 
+.bloco-idaevolta {
+    position: relative;
+    top: -15px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25vw;
+    margin: auto;
+}
+
+.ida {
+    color: rgb(247, 247, 253);
+    display: flex;
+    align-items: center;
+}
+
+.ida-volta {
+    color: rgb(247, 247, 253);
+    display: flex;
+    align-items: center; 
+} */
+
+.linha {
+    height: 1px;
+    width: 20vw;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    opacity: 0.7;
+}
+
+.linha2 {
+    height: 1px;
+    width: 20vw;
+    background: rgb(255, 255, 255);
+    margin-top: 1vh;
+    margin: auto;
+    margin-top: 1vh;
+    opacity: 0.4;
+}
+
+.passagem {
+    width: 100%;
+}
+
+.passagem input{
+    position: relative;
+    top: 10px;
+    height: 5vh;
+    width: 100%;
+    display: inline;
+    border-radius: 8px;
+    margin-bottom: 2vh;
+    border: 1px solid lightslategray;
+    padding: 15px;
+}
+
+#origem {
+    height: 5vh;
+    width: 18vw;
+}
+
+#destino {
+    height: 5vh;
+    width: 18vw;
+}
+
+#form > button {
+    background: rgb(226, 226, 240);
+    color:  #444;
+    margin-top: 5px;
+    height: 5vh;
+    width: 35vw;
+    max-width: 1000px;
+    border-radius: 17px;
+    cursor: pointer;
+    border: 1.7px solid rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+
+.main a {
+    background: rgb(226, 226, 240);
+    color:  #444;
+    height: 37px;
+    width:60%;
+    margin: auto;
+    border-radius: 17px;
+    cursor: pointer;
+    border: 1.7px solid rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.main a:hover {
+    background: rgb(198, 198, 209);
+    transition: .4s;
+}
+
+.main img {
+    height: 2vh;
+}
+
+.box-origem-destino1 {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 34%;
+    left: 11%;
+    width: 18vw;
+    border: solid 1px #5e5e5e;
+    box-shadow: 3px 4px rgba(9, 9, 9, 0.2);
+    border-radius: 5px;
+    background-color:  #EEEEEE;
+    padding: 10px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.box-origem-destino2 {
+    display: none;
+    visibility: visible;
+    position: absolute;
+    top: 34%;
+    left: 71%;
+    width: 18vw;
+    border: solid 1px #5e5e5e;
+    box-shadow: 3px 4px rgba(9, 9, 9, 0.2);
+    border-radius: 5px;
+    background-color: rgb(223, 222, 222);
+    padding: 10px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.radio {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 35px;
+    border: 1px #5e5e5e solid;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.destino-origem {
+    /* position: relative;
+    top: -30px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.datas {
+    /* position: relative;
+    top: -30px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.slide > p {
+    color:rgb(255, 255, 255);
+    font-size: 1.45rem;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    left: 35vw;
+}
+
+#input1 {
+    height: 2vh;
+    width: 1vw;
+}
+
+#input2 {
+    height: 2vh;
+    width: 1vw;
+}
+
+#dataIda {
+    width: 45%;
+}
+
+#dataVolta {
+    width: 45%;
+}
+
+/* AREA CONTAINER  */
+
+
+.top {
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(32, 32, 131);
+}
+
+.container-principal {
+    margin-top: 4vh;
+    background: #ffffff;
+}
+.companhia-aerea {
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.companhia-aerea .cca {
+    position: relative;
+    top: 50px;
+    background: #EEEEEE;
+    text-align: center;
+    width: 30%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    display: none;
+}
+
+.cca p {
+    color: #444;
+    font-size: 1rem;
+    width: 100%;
+    height: 20%;
+    text-align: start;
+}
+
+.cca button {
+    margin-top: 1vh;
+    cursor: pointer;
+    background: #312fcc;
+    color: #EEEEEE;
+    width: 8vw;
+    height: 3vh;
+    border-radius: 10px;
+    border: 1px solid #EEEEEE;
+}
+
+.companhia-aerea .cca img {
+    height: 25vh;
+    width: 100%;
+    border-radius: 10px
+}
+
+.card-local img {
+    height: 35vh;
+    width: 45vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+}
+
+.rec {
+    height: 60vh;
+    width: 100%;
+    background: #EEEEEE;
+}
+
+.rec > p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgb(32, 32, 131);
+    padding-top: 3vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.container-card {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+}
+
+.card3 {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.card3 p {
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.card3 > h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card3:hover {
+    box-shadow: 4px 4px 20px 5px rgba(0, 0, 0, 0.100);
+    transition: .3s;
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 1000;
+}
+
+.fa-whatsapp {
+    margin-top: 11px;
+}
+/* REMENDAÇÔES */
+.caixa-recomendacao {
+    background: #ffffff;
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+}
+
+.sobre-recome {
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    padding: 25px;
+}
+
+.sobre-recome > div {
+    display: flex;
+}
+
+.sobre-recome > div > img {
+    width: 300px;
+}
+
+.sobre-footer {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-recome {
+    background: #ffffff;
+    padding: 55px;
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+}
+
+.sobre {
+    width: 100%;
+    padding: 15px;
+}
+
+.sobre > h3 {
+    font-size: 1.2rem;
+}
+
+.imgzinha img {
+    border-radius: 10px;
+}
+
+.imgviajem img {
+    height: 8vh;
+    position: relative;
+    top: -100px;
+    right: 7vw;
+    float: right;
+    border-radius: 5px;
+}
+
+.desc p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding: 8px;
+    margin-bottom: 3vh;
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-recome .itens .senai img {
+    height: 5.5vh;
+    margin-right: 5vw;
+    border-radius: 5px;
+}
+
+.resc-item {
+    font-size: 0.87rem;
+}
+
+.lugares-content {
+    font-size: 0.87rem;
+}
+
+.planeje {
+    margin-right: 5vw;
+    color: #444;
+}
+
+.lugares {
+    color: #444;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 8vh;
+    margin-bottom: 9vh;
+}
+
+.descontos .imagens img {
+    position: relative;
+    top: 20px;
+    height: 25vh;
+    border-radius: 10px;
+    margin-left: 1vw
+}
+
+footer {
+    background: #111111;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-conteudo .inst {
+    border-bottom: 1px solid #EEEEEE;
+    width: 12vw;
+    padding: 10px;
+}
+
+.footer-conteudo .inst h6 {
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.footer-conteudo .inst .cmp a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #312fcc;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer
+}
+
+.cmp {
+    width: 2vw;
+    margin-top: 0.7vh;
+}
+
+.footer-conteudo .inst  .cmp a:hover {
+    color: #EEEEEE;
+    transition: 0.4s;
+}
+
+.footer-conteudo .social {
+    border-bottom: 1px solid #EEEEEE;
+    width: 12vw;
+    padding: 10px;
+}
+
+.footer-conteudo .social img {
+    margin-top: 0.7vh;
+}
+
+.footer-conteudo .social h6 {
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.footer-conteudo .contato {
+    border-bottom: 1px solid #EEEEEE;
+    width: 12vw;
+    padding: 10px;
+}
+
+.ctt {
+    margin-top: 0.7vh;
+}
+
+.footer-conteudo .contato h6 {
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.footer-conteudo .contato p {
+    color: #312fcc;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.footer-conteudo .devs {
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.footer-conteudo .devs h6 {
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.footer-conteudo .devs p {
+    color: #312fcc;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.social > .imgs img {
+    background: #312fcc;
+    height: 3vh;
+    border-radius: 5px;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: auto;
+}
+
+.footer-end .tc p {
+    color: #312fcc;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 1vh;
+}
+
+.footer-end .dir p {
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-right: -3vw;
+}
+
+.dir {
+    margin-top: 1vh;
+}
+
+@media screen and (min-width: 600px) {
+   
+    .main {
+        width: 65vw;
+    }
+
+    .passagem  input {
+        width: 100%;
+    }
+
+    .container-card {
+        width: flex;
+        flex-direction: unset;
+        justify-content: space-around;
+    }
+
+    .passageiros {
+        width: 50vw;
+        margin: auto;
+    }
+   
+    .card3 {
+        position: relative;
+        top: 40px;
+        width:45%;
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 100px) {
+        
+    .hearder {
+        height: 15vh;
+    }
+
+    .data {
+        height: 6vh;
+    }
+
+    .main {
+        width: 40vw;
+    }
+
+    .blog {
+        width: 25%;
+    }
+
+    .content {
+        width: 60VW;
+        height: 7vh;
+        margin: auto;
+        margin-bottom: 1vh;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .logo > p{
+        font-size: 1.2rem;
+    }
+
+    .link-log-blog {
+        border-radius: 0 0 25px 25px;
+        height: 5vh;
+        width: 90%;
+    }
+
+    .link-log-blog > p {
+        font-size: 1.2rem;
+    }
+
+    .link-log-blog img {
+        height: 4vh;
+    }
+
+    .block-inicio {
+        margin-right: 2vw;
+        width: 10%;
+        height: 6vh;
+        border-radius: 5px;
+    }
+
+    .block-passagem {
+        width: 10%;
+        height: 6vh;
+        border-radius: 5px;
+    }
+
+    .block-inicio p {
+        font-size: 0.95rem;
+    }
+
+    .block-passagem p {
+        font-size: 0.95rem;
+    }
+
+    .campos {
+        margin: auto;
+        height: 5vh;
+        justify-content: start;
+        width: 60vw;
+    }
+
+    .campos > p {
+        margin-left: 0;
+    }
+
+    .card3 {
+        width: 20vw;
+    }
+    
+
+    .radio {
+        width: 2vw;
+        height: 2vw;
+        margin-left: 1vw;
+    }
+
+    .caixa-locais > div {
+        width: 50vw;
+    }
+
+    .caixa-locais > p {
+        text-align: center;
+        margin-bottom: 2vh;
+        font-size: 1.3rem;
+        color: rgb(32, 32, 131)
+    }
+
+    .caixa-aero {
+        width: 40vw;
+        height: 45vh;
+        border-radius: 25px;
+        box-shadow: 2px  2px rgba(124, 119, 119, 0.4);
+    }
+
+    .caixa-aero > img {
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .card-local > img{
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .top {
+        padding: 20px;
+        margin-left: 14vw;
+    }
+
+    .slider {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .slides {
+        margin: auto;
+        width: 500%;
+        height: 500px;
+        display: flex;
+    }
+
+    .slides input {
+        display: none;
+    }
+
+    .slide {
+        width: 20%;
+        transition: 2s;
+    }
+
+    .slide p {
+        margin-left: -15vw;
+    }
+
+    .slide img {
+        width: 90%;
+        height: 350px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    }
+
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+
+    #radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+
+    #radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+
+    #radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #radio5:checked ~ .first {
+        margin-left: -80%;
+    }
+
+    #radio6:checked ~.first {
+        margin-left: -100%;
+    }
+
+    .navigation-auto {
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+    }
+
+    .navigation-auto div {
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+        display: none;
+    }
+
+    .navigation-auto div:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .main {
+        width: 80vw;
+    }
+
+    #origem {
+        width: 35vw;
+    }
+
+    #destino {
+        width: 35vw;
+    }
+    
+    .hearder {
+        height: 15vh;
+    }
+
+    .data {
+        height: 6vh;
+    }
+
+    .blog {
+        width: 25%;
+    }
+
+    .content {
+        width: 60VW;
+        height: 7vh;
+        margin: auto;
+        margin-bottom: 1vh;
+    
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .logo {
+        width: 100%;
+       
+    }
+
+    .logo p {
+        color: #312fcc;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .link-log-blog {
+        display: flex;
+        border-radius: 0 0 25px 25px;
+        height: 5vh;
+        width: 200%;
+    }
+
+    .link-log-blog > p {
+        font-size: 0.9rem;
+    }
+
+    .link-log-blog img {
+        height: 2.5vh;
+        margin-top: 8px;
+    }
+
+    .block-inicio {
+        margin-top: 1vh;
+        margin-right: 2vw;
+        width: 30%;
+        height: 5vh;
+        border-radius: 5px;
+        width: 10%;
+        margin-right: 2vw;
+        box-shadow: 2px  2px rgba(124, 119, 119, 0.1);
+        
+    }
+
+    .block-passagem {
+        margin-top: 1vh;
+        width: 30%;
+        height: 5vh;
+        border-radius: 5px;
+        box-shadow:   2px  2px rgba(124, 119, 119, 0.1);
+    
+    }
+
+    .campos {
+        height: 3vh;
+        width: 60vw;
+        display: flex;
+        justify-content: left;
+        margin: auto;
+    }
+    
+    .campos p {
+        font-size: 1.05rem;
+        cursor: pointer;
+        font-weight: bold;
+        color:#5e5e5e;
+    }
+
+    .rec {
+        height: 70vh;
+        width: 100%;
+    }
+
+    .bloco-idaevolta {
+        width: 60vw;
+    }
+    
+    #input1 {
+        width: 4vw;
+        height: 2.3vh;
+        margin-left: 1.5vw; 
+    }
+
+    #input2 {
+        width: 4vw;
+        height: 2.3vh;
+        margin-left: 1.5vw;
+    }
+
+    .caixa-locais > div {
+        width: 50vw;
+    }
+
+    .linha {
+        width: 50vw;
+        opacity: 0.8;
+    }
+
+    .caixa-locais > p {
+        text-align: center;
+        margin-bottom: 2vh;
+        font-size: 1.3rem;
+        color: rgb(32, 32, 131)
+    }
+
+    .caixa-aero {
+        width: 40vw;
+        height: 45vh;
+        border-radius: 25px;
+        box-shadow: 2px  2px rgba(124, 119, 119, 0.4);
+    }
+
+    .caixa-aero > img {
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .card-local > img{
+        width: 20vw;
+    }
+
+    .companhia-aerea {
+        height: 65vh;
+        width: 100%;
+    }
+
+    .cca button {
+        width: 15vw;
+    }
+
+    .container-card {
+        width: 95%
+    }
+
+    .rec {
+        /* height: 85vh */
+    }
+
+    .card3 {
+        display: flex;
+        flex-direction: column;
+        height: 55vh;
+        width: 100vw;
+        margin-left: 1vw;
+    }
+
+    .container-recome {
+        height: 70vh;
+    }
+
+    #imgzinha1 {
+        visibility: hidden;
+        width: 1px;
+    }
+
+    #imgzinha2 {
+       width: 90vw;
+    }
+
+    #imgzinha3 {
+        visibility: hidden;
+        width: 1px;
+    }
+
+    #imgzinha4 {
+        visibility: hidden;
+        width: 1px;
+    }
+}

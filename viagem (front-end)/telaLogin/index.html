@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h2>Login</h2>
+        <label for="nome" class="nome">
+        </label>
+        <form action="" class="form-login">
+            <div class="formulario">
+                <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+                <div class="linha"></div>
+            </div>
+            <div class="formulario">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <div class="linha"></div>
+            </div>
+            <div class="login">
+                <div class="botao-login">
+                    <input type="button" value="Entrar Cliente" id="principal" onclick="loginCliente()">
+                    <input type="button" value="Entrar Adm" onclick="loginAdm()">
+                </div>
+                <div class="cadastro">
+                    <button onclick="cadastro(this)" type="button">Cadastrar-se</button>
+                </div>
+            </div>
+            
+        </form>
+        <div class="box">
+            <div class="box-container">
+                <p id="p">Sucesso</p>
+                <img src="" alt="">
+            </div>
+        </div>    
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

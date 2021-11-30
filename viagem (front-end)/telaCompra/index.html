@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar</title>
+    <link rel="shortcut icon" href="./assets/coroa-branca.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="proximoBanco(),validaAcesso()">
+    
+    <header class="hearder">
+
+        <div class="content">
+            <div class="logo">
+                <img src="assets/coroaazul.png"><p>Rei das Viagens</p>
+            </div>
+            <div class="blog">
+               
+                 
+                <div class="link-log-blog">
+                    <a href="../telaLogin/index.html"><img src="assets/user.png" id="img-sessao"></a>
+                    <p class="p">Iniciar Sessão</p>
+                    
+                </div>
+                
+                <div class="box-options">
+                    <img src="assets/x.png" alt="" id="close">
+                    <div class="options">
+                    </div>
+                    <div class="area-cliente">
+                        <h1>Minhas Passagens</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="campos">
+            <div class="block-inicio">
+                <p>Inicio</p>
+            </div>
+            <div class="block-passagem">
+                <p onclick="document.location.href = '/telaVoos/index.html'">Passagens</p>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div action="" class="caixa-form">
+            <h3>Dados Bancarios</h3>
+            <form class="form">
+
+                <label for="Nome">nome no cartão</label>
+                <input type="text" name="Nome" id="nCart">
+                <label for="Nome">numero do cartão</label>
+                <input type="text" name="Nome" id="nNume">
+                <label for="Nome">validade</label>
+                <input type="month" name="Nome"  id="nVali">
+                <div class="caixa-chave">
+                    
+                    <label for="">chave</label>
+                    
+                    <img src="assets/chave.png" alt="">
+                    
+                    <div class="code-chave model">
+                        <div class="div-code">
+                            <img src="assets/codigo-de-seguranca-do-cartao.png" alt="">
+                            <input type="text" placeholder="Chave (***)" id="nCha">
+                            <button type="button">confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--
+                <label for="Nome">Validade</label>
+                <input type="text" name="Nome" id="nVali">
+                -->
+                <button type="button" id="btnBanco">proximo</button>
+            </form>
+            <div class="cadastrar-pessoais">
+                <label for="rg">RG</label>
+                <input type="text" name="rg" id="inRg">
+                <label for="sexo">Sexo</label>
+                <select name="sexo" id="selSexo">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <label for="end">Endereco</label>
+                <input type="text" name="end" id="inEnd">
+                <label for="tel">Telefone</label>
+                <input type="text" name="tel" id="inTel">
+                <label for="nas">Data de Nascimento</label>
+                <input type="date" name="nas" id="inNas">
+            </div>
+            <div class="dados-cadastrado">
+                <div>
+                    <h3>Nome no cartão</h3>
+                    <p>55445</p>
+                    <h3>Numero do cartão</h3>
+                    <p>michael </p>
+                    <h3>validade</h3>
+                    <p>24/10/2021<p>
+                </div>
+                <img src="assets/cliente.png" alt="">
+            </div>
+            <div class="dados-pessoais">
+                <div>
+                    <h3>RG</h3>
+                    <p>55445</p>
+                    <h3>nome</h3>
+                    <p>michael </p>
+                    <h3>sexo</h3>
+                    <p>24/10/2021</p>
+                    <h3>Endereço</h3>
+                    <p>24/10/2021</p>
+                    <h3>telefone</h3>
+                    <p>24/10/2021</p>
+                </div>
+                <img src="assets/cliente.png" alt="">
+            </div>
+            <div class="div-assentos">
+                
+
+            </div>
+            <div class="caixa-dados">
+                <img src="assets/cliente.png" alt="">
+                <div>
+                    <p></p>
+                    <img src="assets/assento.png" alt="">
+                </div>
+                <p>Selecione seu Desconto</p>
+                <select name="" id="selDescontos" onclick="lisDescontos()"></select>
+            </div>
+        </div>
+        <div class="fundo-compra">
+            <div class="model-compra">
+                <img src="assets/voo-de-aviao.png" alt="">
+                <p>Compra com Sucesso</p>
+            </div>
+        </div>
+    </main>
+    
+    <!--
+    <main>
+    
+
+        <div class="assentos">
+            
+            <p>Escolha seu Assento</p>
+            <div class="caixa-checks">
+                
+            </div>
+            <button type="button" onclick="proximo()">Proximo</button>
+        </div>
+        
+        
+        <div class="cards">
+            <div class="dd">
+                <h3>Dados do pagador</h3>
+            </div>
+               
+            <div class="pessoal">
+                <div class="dp">
+                    <h4>Dados Pessoais</h4>
+                </div>
+            
+                <div class="caixas">
+                <p>Documento</p>
+                <input type="text" id="rg" placeholder="RG">
+                <p>Nascimento</p>
+                <input type="date" id="nasc" placeholder="Ex: 25/10/1987">
+                <p>Sexo</p>
+                <select id="sexo">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <p>Telefone</p>
+                <input type="text" id="tel" placeholder="Ex: (19) 99438-3856">
+                <p>Endereço</p>
+                <input type="text" id="end" placeholder="Ex: R. do asfalto">
+            </div>
+            
+        </div>
+        
+            <div class="dadCli">
+                <div class="dadosVisual">
+                    <label for="nome">Nome</label>
+                    <p>Michael José</p>
+                    <input type="text" name="" id="">
+                    <label for="rg">RG</label>
+                    <p>18.152.142-5</p>
+                    <label for="sexo">Sexo</label>
+                    <p>Masculino</p>
+                    <label for="end">Endereço</label>
+                    <p>Rua Padre Teilhard Chardin</p>
+                    <label for="tel">Telefone</label>
+                    <p>(19) 9999-1452</p>
+                    <label for="nas">Data Nascimento</label>
+                    <p>24/10/2002</p>
+                </div>
+                <div class="dadosImg">
+                    <img src="assets/cliente.png" alt="">
+                </div>
+            </div>
+                <div class="db">
+                    <h4>Dados Bancários</h4>
+                </div>
+                <div class="line"></div>
+                <div class="selectPag">
+                    <label for="sele">Selecionar Cartão</label>
+                    <select class="seletor" name="sele">
+                
+                    </select>
+                    
+                </div>
+                <div class="selectDes">
+                    <label for="sele">Selecionar Desconto</label>
+                    <select class="seletorDes" name="sele">
+                
+                    </select>
+                </div>
+                
+                <div class="caixao">
+                    <p>Nome do Cartão</p>
+                    <input type="text" id="conta">
+                    <p>Número do Cartão</p>
+                    <input type="number" id="cartao">
+                    <p>Validade do Cartão</p>
+                    <input type="month" id="val">
+                    <p>Chave</p>
+                    <input type="number" id="chave" placeholder="Ex: 1234567"> 
+                </div>
+                <div class="line"></div>
+                
+                <div class="Comprar">
+                    <p>Compra feita com Sucesso</p>
+                </div>
+                
+                <button id="btnComp">Confirmar</button>
+        </div>
+        
+        <div class="modal-off">
+                <p>Você não tem conta</p>
+                <button class="botao">Entrar</button>
+        </div>
+        -->
+        <!--
+        <footer class="footer">
+            <div class="rdv">
+                <img src="assets/coroa.png"><p>Rei das Viagens</p>
+            </div>
+            <div class="linha"></div>
+            <div class="devs">
+                <p>Desenvolvido por alunos do Senai</p>
+                <p>Michael José</p>
+                <p>Rafael Tieppo</p>
+                <p>Rodrigo </p>
+                <p>Allan</p>
+            </div>
+            <div class="embaixo">
+                <p>&copy Rei das Viagens. Todos os direitos reservados.</p>
+            </div> 
+        </footer>
+        
+    </main>
+    -->
+</body>
+<script src="index.js"></script>
+<script src="/telaInicio/index.js"></script>
+</html>

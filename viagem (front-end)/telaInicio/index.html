@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve sua viagem na maior agência de viagens online do Senai | Rei das Viagens</title>
+    <link rel="shortcut icon" href="./assets/coroa-branca.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="validaAcesso(), companhialis()">
+
+    <header class="hearder">
+
+        <div class="content">
+            <div class="logo">
+                <img src="assets/coroaazul.png"><p>Rei das Viagens</p>
+            </div>
+            <div class="blog">
+                <div class="link-log-blog">
+                    <a href="../telaLogin/index.html"><img src="assets/user.png" id="img-sessao"></a>
+                    <p class="p">Iniciar Sessão</p> 
+                </div>
+                
+                <div class="box-options">
+                    <img src="assets/x.png" alt="" id="close">
+                    <div class="options">
+                    </div>
+                    <div class="area-cliente">
+                        <h1>Minhas Passagens</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="campos">
+            <div class="block-inicio">
+                <p>Inicio</p>
+            </div>
+            <div class="block-passagem">
+                <p onclick="document.location.href = '/telaVoos/index.html'">Passagens</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <p>Faça sua reserva</p>
+            <div class="linha">
+            </div>
+            <div class="bloco-idaevolta">
+                <div class="ida">
+                    <p>Ida</p>
+                    <div class="radio" id="input1" onclick="selecionar(this)"></div>
+                </div>
+                <div class="ida-volta">
+                    <p>Ida e Volta</p>
+                    <div class="radio" id="input2" onclick="selecionar(this)"></div>
+                </div>
+            </div>
+            <div class="linha">
+            </div>
+            <form id="form">
+                <div class="passagem">
+                    <div class="destino-origem">
+                        <div class="origem">
+                            <input type="text" id="origem" placeholder="ORIGEM" required>
+                            <div class="box-origem-destino1">
+                                <p>Cidades e Aeroportos</p>
+                                <div class="box-cidades-aero1">   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destino">
+                            <input type="text" id="destino" placeholder="DESTINO" required>
+                            <div class="box-origem-destino2">
+                                <p>Cidades e Aeroportos</p>
+                                <div class="box-cidades-aero2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="datas">
+                        <input type="date" id="dataIda" disabled>
+                        <input type="date" id="dataVolta" disabled>
+                    </div>
+                </div>
+                <a onclick="buscar()" id="btn"><img src="assets/buscar.png">Buscar</a>
+            </form>
+            <!-- <a onclick="buscar(), validarInput()" id="btn"><img src="assets/buscar.png">Buscar</a> -->
+        </div>   
+    </main>
+    <div class="companhia-aerea">
+        <div class="cca">
+            <img src="assets/latam_aviao.jpg" alt="">
+            <p>Latam é uma empresa de fornecimento de transporte Aereo, uma das melhores do Brasil</p>
+            <option value="LATAM"></option>
+            <button>Viagens LATAM</button>
+        </div>
+    </div>
+    
+    <div class="descontos">
+        <div class="imagens">
+            <img src="assets/descazuljpg.jpg" id="imgzinha2">
+            <img src="assets/imgdesconto.jfif" id="imgzinha3">
+        </div>
+    </div>
+    <div class="top">
+        <h3>Destinos mais procurados hoje no Brasil</h3>
+    </div>
+    <div class="slider">
+        <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+            <!--
+            <div class="slide first">
+                <p>Angra dos Reis</p>
+                <img src="assets/angra.jpg" alt=""> 
+            </div>
+            -->
+            <div class="slide first">
+                <p>Rio de Janeiro</p>
+                <img src="assets/rj.jpg" alt=""> 
+            </div>
+            <div class="slide">
+                <p>São Paulo</p>
+                <img src="assets/sao_paulo.jpg" alt=""> 
+            </div>
+            <div class="slide">
+                <p>Maceió</p>
+                <img src="assets/maceio.jfif" alt=""> 
+            </div>
+            <div class="slide">
+                <p>Porto de Galinhas</p>
+                <img src="assets/Porto-de-Galinhas.jpg" alt=""> 
+            </div>
+            <div class="slide">
+                <p>Fortaleza</p>
+                <img src="assets/Fortaleza,_Brazil_(4).jpg" alt=""> 
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-principal">
+        
+        <div class="rec">
+            <p>Recomendações para viajar com tranquilidade</p>
+            <div class="container-card">
+                <div class="card3">
+                    <h4>Planeje sua Viagem</h4>
+                    <p>
+                        Faça um planejamento da viagem.
+                         Pesquise e verifique com antecedência se os locais que pretende visitar 
+                         encontram-se abertos para a visitação.
+                    </p>
+ 
+                </div>
+                <div class="imgzinha">
+                    <img src="assets/viajepelobrasil.jpg" id="imgzinha1">
+                </div>
+                <div class="card3">
+                    <h4>Verifique seu destino</h4>
+                    <p>Alguns pontos turísticos estão com capacidade máxima de 
+                    visitantes por dia reduzida e, por isso, realizam agendamentos
+                    prévios. Então, é bom verificar e agendar um horário específico 
+                    para realizar o passeio, evitando frustrações e deslocamentos desnecessários.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caixa-recomendacao">
+        <div class="sobre-recome">
+            <div>
+                <div>
+                    <h3>Reserve sua viagem na maior agência de viagens online do Senai</h3>
+                    <p>Compre no Rei das Viagens e garanta as melhores tarifas em passagens aereas. Somos a maior agência online do Senai</p>
+                </div>
+                <img src="assets/PASSAGENS_AEREAS_NACIONAIS.jpg" id="imgzinha4">
+            </div>
+            <div class="sobre-footer">
+                <div class="senai">
+                    <img src="./assets/senai.png">
+                </div>
+                <div class="planeje">
+                    <h4>Planeje a sua viagem</h4>
+                    <div class="resc-item">
+                        <p>Restrições de viagem por COVID</p>
+                        <p>Black Friday</p>
+                    </div>
+                </div>
+                <div class="lugares">
+                    <h4>Passagens</h4>
+                    <div class="lugares-content">
+                        <p>Passagens para Pedreira</p>
+                        <p>Passagens para Itatinga</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5519997161599" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>-->
+    <footer>
+        <div class="footer-conteudo">
+            <div class="inst">
+                <h6>INSTITUCIONAL</h6>
+                <div class="cmp">
+                    <a href="../telaInicio/index.html">Home</a>
+                    <a href="../telaVoos/index.html">Passagens</a>
+                </div>
+            </div>
+            <div class="contato">
+                <h6>CONTATO</h6>
+                <div class="ctt">
+                    <p>(019) 99716-1599</p>
+                </div> 
+            </div>
+            <div class="devs">
+                <h6>Desenvolvedores</h6>
+                <p>Michael José</p>
+                <p>Rafael Tieppo</p>
+                <p>Allan Silva</p>
+                <p>Rodrigo Morais</p>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div class="tc">
+                <p>Rei das Viagens</p>
+            </div>
+       
+            <div class="dir">
+                <p>&copy 2021 Rei das Viagens.</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+<script src="indexLis.js"></script>
+<script src="slider.js"></script>
+</html>

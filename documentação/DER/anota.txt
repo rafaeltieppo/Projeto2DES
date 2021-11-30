@@ -1,0 +1,27 @@
+Clientes 
+	nome, cpf, endereço, telefone, sexo, id-bancario, idade, 
+
+dados bancarios
+	id-bancario, numero da conta, validade, nome-cliente, numero-cartao, codigo-chave
+
+descontos
+	id-descont, pcd, á vista, ações humanitaria
+	
+companhia aerea
+	nome, cnpj
+
+passagem destino
+	id_passagem, id_cidade, id_cidade
+
+passageiros adicionais
+	id_passagem, cpf
+
+Assentos
+	id_passagem, assentos
+
+Passagens
+	id, cpf, companhia-aerea,  bagagem, hora de compra, hora de embarque, hora de desembarque, id-assento, id-adicionais
+
+
+
+	 
